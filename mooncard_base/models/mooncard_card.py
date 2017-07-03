@@ -26,6 +26,8 @@ class MooncardCard(models.Model):
         'res.company', string='Company', required=True,
         default=lambda self: self.env['res.company']._company_default_get(
             'mooncard.card'))
+    moonacc_id = fields.Many2one('mooncard.account', string='MoonCard account',
+                                 help='Account link to this card')
 
     @api.one
     @api.depends('code', 'name')

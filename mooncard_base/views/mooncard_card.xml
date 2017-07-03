@@ -16,6 +16,7 @@
                 <field name="name"/>
                 <field name="code"/>
                 <field name="user_id"/>
+                <field name="moonacc_id"/>
                 <field name="active"/>
                 <field name="company_id" groups="base.group_multi_company"/>
             </group>
@@ -31,6 +32,7 @@
             <field name="name"/>
             <field name="code"/>
             <field name="user_id"/>
+            <field name="moonacc_id"/>
             <field name="company_id" groups="base.group_multi_company"/>
         </tree>
     </field>
@@ -43,6 +45,7 @@
         <search string="Search Moon Cards">
             <field name="name" string="Token Number, Short Name or User"
                 filter_domain="['|', '|', ('name', 'ilike', self), ('code', 'ilike', self), ('user_id', 'ilike', self)]"/>
+            <field name="moonacc_id"/>
             <group name="groupby" string="Group By">
             </group>
         </search>

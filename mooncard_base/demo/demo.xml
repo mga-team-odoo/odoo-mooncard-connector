@@ -16,6 +16,11 @@
     <field name="code">AdL</field>
 </record>
 
+<record id="account1" model="mooncard.account">
+    <field name="name">987654321</field>
+    <field name="code">My Primary Account</field>
+</record>
+
 <record id="load1" model="mooncard.transaction">
     <field name="unique_import_id">beaf9990-8ed1-4v31-aa70-3bef49za86b0</field>
     <field name="transaction_type">load</field>

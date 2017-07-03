@@ -3,3 +3,5 @@ access_mooncard_transaction_invoice_grp,Read/write/create access on mooncard.tra
 access_mooncard_transaction_full,Full access on mooncard.transaction to System grp,model_mooncard_transaction,base.group_system,1,1,1,1
 access_mooncard_card_full,Full access on mooncard.card to Finance Manager,model_mooncard_card,account.group_account_manager,1,1,1,1
 access_mooncard_card_read,Read access on mooncard.card to Employee,model_mooncard_card,base.group_user,1,0,0,0
+access_mooncard_account_full,Full access on mooncard.account to Finance Manager,model_mooncard_account,account.group_account_manager,1,1,1,1
+access_mooncard_account_read,Read access on mooncard.account to Employee,model_mooncard_account,base.group_user,1,0,0,0
