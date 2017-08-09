@@ -29,7 +29,7 @@ class MooncardAccount(models.Model):
         if self.name and not self.name.isdigit():
             raise ValidationError(
                 _("'%s' is not a valid Mooncard Account token. "
-                "It should only have digits") % self.name)
+                  "It should only have digits") % self.name)
 
     _sql_constrains = [(
         'account_token_uniq',
