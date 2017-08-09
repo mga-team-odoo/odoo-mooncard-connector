@@ -67,7 +67,7 @@
 </record>
 
 <menuitem id="mooncard_account_menu" action="mooncard_account_action"
-    parent="account.menu_configuration_misc" sequence="110"/>
+    parent="mooncard_menu" sequence="110"/>
 
 </data>
 </openerp>
