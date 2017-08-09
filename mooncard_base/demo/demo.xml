@@ -11,15 +11,17 @@
     <field name="country_id" ref="base.fr"/>
 </record>
 
-<record id="card1" model="mooncard.card">
-    <field name="name">684842987</field>
-    <field name="code">AdL</field>
-</record>
-
 <record id="account1" model="mooncard.account">
     <field name="name">987654321</field>
     <field name="code">My Primary Account</field>
 </record>
+
+<record id="card1" model="mooncard.card">
+    <field name="name">684842987</field>
+    <field name="code">AdL</field>
+    <field name="moonacc_id" ref="account1"/>
+</record>
+
 
 <record id="load1" model="mooncard.transaction">
     <field name="unique_import_id">beaf9990-8ed1-4v31-aa70-3bef49za86b0</field>
