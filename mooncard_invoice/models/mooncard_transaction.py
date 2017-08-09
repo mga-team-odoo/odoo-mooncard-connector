@@ -47,6 +47,8 @@ class MooncardTransaction(models.Model):
         # TODO: in the future, we may have to support the case where
         # both mooncard_invoice and mooncard_expense are installed
         for line in self:
+            if line.output_type != 'invoice':
+                continue
             if line.state != 'draft':
                 logger.warning(
                     'Skipping mooncard transaction %s which is not draft',
