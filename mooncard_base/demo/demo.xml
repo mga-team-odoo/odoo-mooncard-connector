@@ -20,6 +20,7 @@
     <field name="name">684842987</field>
     <field name="code">AdL</field>
     <field name="moonacc_id" ref="account1"/>
+    <field name="output_type">invoice</field>
 </record>
 
 
@@ -31,6 +32,7 @@
     <field name="total_company_currency">1000</field>
     <field name="total_currency">-1000</field>
     <field name="currency_id" ref="base.EUR"/>
+    <field name="output_type">invoice</field>
 </record>
 
 <record id="expense1" model="mooncard.transaction">
@@ -50,6 +52,7 @@
     <field name="currency_id" ref="base.EUR"/>
     <!-- I put a dumb image... but it should be the URL of the image of the receipt -->
     <field name="image_url">https://pixabay.com/static/uploads/photo/2016/02/19/11/30/pizza-1209748_960_720.jpg</field>
+    <field name="output_type">invoice</field>
 </record>
 
 <record id="expense2" model="mooncard.transaction">
@@ -68,6 +71,7 @@
     <field name="total_currency">-180.30</field>
     <field name="currency_id" ref="base.EUR"/>
     <field name="image_url">http://www.air-journal.fr/wp-content/uploads/aj_easyjet-a319-2.jpg</field>
+    <field name="output_type">invoice</field>
 </record>
 
 <record id="expense3" model="mooncard.transaction">
@@ -86,6 +90,7 @@
     <field name="total_currency">-25.50</field>
     <field name="currency_id" ref="base.EUR"/>
     <field name="image_url">http://img.20mn.fr/vmEmhNsWS2iTdgT-ki-OVg/2048x1536-fit_lyon-le-19-novembre-2014-la-premiere-rame-ter-regio2n-vient-d-etre-livree-en-rhone-alpes-d-ici-a-mi.jpg</field>
+    <field name="output_type">invoice</field>
 </record>
 
 
