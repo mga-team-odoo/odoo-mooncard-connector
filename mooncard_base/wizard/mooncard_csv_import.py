@@ -93,7 +93,8 @@ class MooncardCsvImport(models.TransientModel):
         vals.update({
             'unique_import_id': line.get('id'),
             'date': self.convert_datetime_to_utc(line['date_transaction']),
-            'card_id': card_id,
+            'card_id': card_id[0],
+            'output_type': card_id[1],
             'country_id': country_id,
             'merchant': line.get('merchant'),
             'total_company_currency': float(line.get('amount_eur')),
@@ -109,11 +110,11 @@ class MooncardCsvImport(models.TransientModel):
         mco = self.env['mooncard.card']
         logger.info('Importing Mooncard transactions.csv')
         company = self.env.user.company_id
-        token_res = mco.search_read(
-            [('company_id', '=', company.id)], ['name'])
+        card_res = mco.search_read(
+            [('company_id', '=', company.id)], ['name', 'output_type'])
         tokens = {}
-        for token in token_res:
-            tokens[token['name']] = token['id']
+        for tk in card_res:
+            tokens[tk['name']] = (tk['id'], tk['output_type'])
         fileobj = TemporaryFile('w+')
         fileobj.write(self.mooncard_file.decode('base64'))
         fileobj.seek(0)

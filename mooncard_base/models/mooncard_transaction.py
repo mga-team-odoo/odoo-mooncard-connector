@@ -67,6 +67,10 @@ class MooncardTransaction(models.Model):
         ('draft', 'Draft'),
         ('done', 'Done'),
         ], string='State', default='draft', readonly=True)
+    output_type = fields.Selection(
+        [('invoice', 'Invoice'), ('expense', 'Expense')],
+        string='Output type', default='invoice',
+        help='When transation it processed, create an invoice or expense')
 
     _sql_constraints = [(
         'unique_import_id',

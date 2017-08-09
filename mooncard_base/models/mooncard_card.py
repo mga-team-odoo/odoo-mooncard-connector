@@ -28,6 +28,10 @@ class MooncardCard(models.Model):
             'mooncard.card'))
     moonacc_id = fields.Many2one('mooncard.account', string='MoonCard account',
                                  help='Account link to this card')
+    output_type = fields.Selection(
+        [('invoice', 'Invoice'), ('expense', 'Expense')],
+        string='Output type', default='invoice',
+        help='When transation it processed, create an invoice or expense')
 
     @api.one
     @api.depends('code', 'name')

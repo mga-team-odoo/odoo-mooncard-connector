@@ -17,6 +17,7 @@
                 <field name="code"/>
                 <field name="user_id"/>
                 <field name="moonacc_id"/>
+                <field name="output_type"/>
                 <field name="active"/>
                 <field name="company_id" groups="base.group_multi_company"/>
             </group>

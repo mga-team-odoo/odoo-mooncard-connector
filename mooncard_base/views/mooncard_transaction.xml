@@ -37,6 +37,7 @@
                 <field name="total_company_currency" widget="monetary" options="{'currency_field': 'company_currency_id'}"/>
                 <field name="total_currency" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                 <field name="image_url" widget="url"/>
+                <field name="output_type"/>
             </group>
         </form>
     </field>
